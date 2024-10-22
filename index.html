@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>PASSWORD GENERATOR</h1>
+        <input type="text" id="pass-display" readonly>
+        <button id="copy-btn" onclick="copyToClipboard()"><i class="fa-regular fa-copy"></i></button>
+        <button id="generate-btn" onclick="generatePassword()"><i class="fa-solid fa-arrows-rotate"></i></button>
+        <h4>Options:</h4>
+        <div class="options">
+            <label>Password Length :&nbsp; <span id="len-display">&nbsp; 8 </span> 
+            <input type="range" id="pass-length" min="4" max="32" value="8" oninput="updateLengthDisplay()"></label>
+            <br>
+            <label for="uppercase">Use Uppercase Letters :
+                <label class="switch">
+                    <input type="checkbox" id="uppercase" unchecked>
+                    <span class="slider"></span>
+                </label>
+            </label>
+            <br>
+            <label for="lowercase">Use Lowercase Letters :
+                <label class="switch">
+                    <input type="checkbox" id="lowercase" checked>
+                    <span class="slider"></span>
+                </label>
+            </label>
+            <br>
+            <label for="numbers">Use Digits :
+                <label class="switch">
+                    <input type="checkbox" id="numbers" checked>
+                    <span class="slider"></span>
+                </label>
+            </label>
+            <br>
+            <label for="symbols">Use Symbols :
+                <label class="switch">
+                    <input type="checkbox" id="symbols">
+                    <span class="slider"></span>
+                </label>
+            </label>
+            <br>
+            <label>Custom Symbols :
+            <input type="text" id="custom-symbols" placeholder="!@#$%^&*()"></label>
+        </div>
+    </div>
+    <script src="passwordgenerator.js"></script>
+    <script src="https://kit.fontawesome.com/b0a180b3b8.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
